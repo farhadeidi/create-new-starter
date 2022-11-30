@@ -1,0 +1,40 @@
+{
+  "name": "create-new-starter",
+  "version": "1.0.1",
+  "type": "module",
+  "description": "Create a new starter template",
+  "main": "bin/index.js",
+  "repository": "https://github.com/farhadeidi/create-new-starter",
+  "author": "Farhad Eidi",
+  "license": "MIT",
+  "private": false,
+  "bin": {
+    "create-new-starter": "bin/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "compile-run": "tsc && node dist/index.js",
+    "dev": "nodemon --watch ./src -e ts --exec \"yarn compile-run\"",
+    "local-install": "npm i -g"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/test/**",
+      "**/templates/**"
+    ],
+    "delay": 0
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.11.9",
+    "chalk": "^5.1.2",
+    "cli-select": "^1.1.2",
+    "ncp": "^2.0.0",
+    "nodemon": "^2.0.20",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

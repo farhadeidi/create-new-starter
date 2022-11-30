@@ -1,0 +1,25 @@
+{
+  "name": "ts-starter",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "build-watch": "tsc -w",
+    "compile-run": "tsc && node dist/index.js",
+    "dev": "nodemon --watch ./src -e ts --exec \"yarn compile-run\""
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/test/**",
+      "**/templates/**"
+    ],
+    "delay": 0
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "nodemon": "^2.0.20",
+    "typescript": "^4.9.3"
+  }
+}
