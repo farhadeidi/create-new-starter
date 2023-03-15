@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 export const getTemplates = (appName) => [
     {
         name: "vite-react",
@@ -15,7 +16,6 @@ export const getTemplates = (appName) => [
             `.babel-plugin-macrosrc.json`,
             `.eslintrc.json`,
             `.prettierrc`,
-            `.gitignore`,
             "tsconfig.json",
             "vite.config.ts",
         ],

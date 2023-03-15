@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import { PackageNameProps } from "./index.js";
 
 export type TemplateConfig = {
@@ -32,7 +34,6 @@ export const getTemplates = (appName: string): TemplateConfig[] => [
       `.babel-plugin-macrosrc.json`,
       `.eslintrc.json`,
       `.prettierrc`,
-      `.gitignore`,
       "tsconfig.json",
       "vite.config.ts",
     ],

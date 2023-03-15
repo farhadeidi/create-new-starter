@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import fs from "fs";
 import cliSelect from "cli-select";
 import ncp from "ncp";
