@@ -24,7 +24,7 @@ export const getTemplates = (appName: string): TemplateConfig[] => [
     // initialInstaller: `yarn create vite ${appName} --template react-ts`,
     initialInstaller: {
       yarn: `yarn create vite ${appName} --template react-ts`,
-      npm: `npm create vite@latest ${appName} --template react-ts`,
+      npm: `npm create vite@latest ${appName} -- --template react-ts`,
       pnpm: `pnpm create vite@latest ${appName} --template react-ts`,
     },
 
