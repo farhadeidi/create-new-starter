@@ -2,8 +2,9 @@ import { Flex } from '@mantine/core';
 
 import { Outlet } from 'react-router-dom';
 
-import ShellHeader from '@/components/ShellHeader';
 import { headerLinks } from '@/configs/links';
+
+import ShellHeader from './Header';
 
 export interface ShellProps {}
 const Shell: React.FC<ShellProps> = () => {

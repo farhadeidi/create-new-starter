@@ -21,7 +21,8 @@ import { NavLinkProps } from '@/configs/links';
 import { isRouteActive } from '@/shared/helpers';
 
 import Icon from '../Icon';
-import NavbarLink from '../NavbarLink';
+
+import NavbarLink from './NavbarLink';
 
 export interface ShellHeaderProps {
   height: number;

@@ -1,4 +1,11 @@
-import { Box, Button, createStyles, Menu, NavLink } from '@mantine/core';
+import {
+  Box,
+  Button,
+  createStyles,
+  getStylesRef,
+  Menu,
+  NavLink,
+} from '@mantine/core';
 
 import { Link } from 'react-router-dom';
 
@@ -6,20 +13,20 @@ import { NavLinkProps } from '@/configs/links';
 
 import Icon from '../Icon';
 
-const useStyles = createStyles((theme, _params, getRef) => ({
+const useStyles = createStyles((theme) => ({
   link: {
     color:
       theme.colorScheme === 'dark'
         ? theme.colors.gray[0]
         : theme.colors.gray[7],
 
-    [`&.${getRef('isActive')}`]: {
+    [`&.${getStylesRef('isActive')}`]: {
       color: theme.colors[theme.primaryColor][7],
     },
   },
 
   isActive: {
-    ref: getRef('isActive'),
+    ref: getStylesRef('isActive'),
   },
 }));
 

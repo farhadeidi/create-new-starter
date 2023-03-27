@@ -6,9 +6,9 @@ import {
 } from 'react-router-dom';
 
 import Shell from '@/components/Shell';
-import AboutPage from '@/pages/About.page';
-import HomePage from '@/pages/Home.page';
-import SupportPage from '@/pages/Support.page';
+import AboutPage from '@/pages/About';
+import HomePage from '@/pages/Home';
+import SupportPage from '@/pages/Support';
 
 const Pages = () => {
   return (
