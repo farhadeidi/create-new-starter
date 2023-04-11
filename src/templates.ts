@@ -30,6 +30,7 @@ export const getTemplates = (appName: string): TemplateConfig[] => [
 
     files: [
       "src",
+      "public",
       "_templates",
       `.babel-plugin-macrosrc.json`,
       `.eslintrc.json`,
