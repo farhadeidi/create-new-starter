@@ -7,11 +7,13 @@ export const getTemplates = (appName) => [
         // initialInstaller: `yarn create vite ${appName} --template react-ts`,
         initialInstaller: {
             yarn: `yarn create vite ${appName} --template react-ts`,
-            npm: `npm create vite@latest ${appName} --template react-ts`,
+            npm: `npm create vite@latest ${appName} -- --template react-ts`,
             pnpm: `pnpm create vite@latest ${appName} --template react-ts`,
         },
         files: [
             "src",
+            "public",
+            "index.html",
             "_templates",
             `.babel-plugin-macrosrc.json`,
             `.eslintrc.json`,
@@ -22,6 +24,7 @@ export const getTemplates = (appName) => [
         constants: {
             siteName: appName,
             apiUrl: "",
+            logoUrl: "/logo.svg",
         },
         extendedPackage: {
             scripts: {
