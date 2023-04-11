@@ -10,16 +10,15 @@ import {
   Header,
   MediaQuery,
   Stack,
-  Title,
   useMantineColorScheme,
 } from '@mantine/core';
 
 import { useLocation } from 'react-router-dom';
 
-import { constants } from '@/configs/constants';
 import { NavLinkProps } from '@/configs/links';
 import { isRouteActive } from '@/shared/helpers';
 
+import Brand from '../Brand/Brand';
 import Icon from '../Icon';
 
 import NavbarLink from './NavbarLink';
@@ -28,6 +27,7 @@ export interface ShellHeaderProps {
   height: number;
   links: NavLinkProps[];
 }
+
 const ShellHeader: React.FC<ShellHeaderProps> = ({ height, links }) => {
   const { pathname } = useLocation();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -48,7 +48,7 @@ const ShellHeader: React.FC<ShellHeaderProps> = ({ height, links }) => {
               title={isDrawerOpen ? 'Close navigation' : 'Open navigation'}
             />
           </MediaQuery>
-          <Title size={24}>{constants.siteName}</Title>
+          <Brand withSiteName logoSize={42} typoSize={18} />
         </Group>
         <Flex sx={{ flex: 1 }} justify="flex-end">
           <Group>
