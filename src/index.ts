@@ -89,7 +89,17 @@ const initiateApp = async ({
   } else {
     await runCommand(`mkdir ${name}`);
   }
+};
 
+const installLibraries = async ({
+  name,
+  configs,
+  packageManager,
+}: {
+  name: string;
+  configs: TemplateConfig;
+  packageManager: PackageNameProps;
+}) => {
   if (configs.dependencies.length > 0) {
     await installDependencies({
       dir: name,
@@ -152,7 +162,7 @@ const start = async () => {
     source: `${sourcePath}templates/${configs.name}`,
     target: `${name}`,
   });
-
+  await installLibraries({ name, packageManager, configs });
   await mergePackages({
     packagePath: `${name}/package.json`,
     data: configs.extendedPackage,

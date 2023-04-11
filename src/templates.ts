@@ -42,6 +42,7 @@ export const getTemplates = (appName: string): TemplateConfig[] => [
     constants: {
       siteName: appName,
       apiUrl: "",
+      logoUrl: "/logo.svg",
     },
 
     extendedPackage: {
