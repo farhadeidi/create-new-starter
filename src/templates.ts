@@ -88,6 +88,74 @@ export const getTemplates = (appName: string): TemplateConfig[] => [
       "prettier",
     ],
   },
+  {
+    name: "react-native-starter",
+    label: "React-Native-Typescript",
+    description: "React-Native, RNUILIB, VectorIcons,",
+    initialInstaller: {
+      yarn: `npx react-native@latest init ${appName} --skip-install`,
+      npm: `npx react-native@latest init ${appName} --skip-install`,
+      pnpm: `npx react-native@latest init ${appName} --skip-install`,
+    },
+
+    files: [
+      "src",
+      ".eslintrc.js",
+      ".prettierrc.js",
+      "babel.config.js",
+      "declarations.d.ts",
+      "index.js",
+      "metro.config.js",
+      "react-native.config.js",
+      "README.md",
+      "tsconfig.json",
+    ],
+
+    constants: {
+      siteName: appName,
+      apiUrl: "",
+      logoUrl: "/logo.svg",
+    },
+
+    extendedPackage: {
+      scripts: {
+        ios14: "react-native run-ios --simulator='iPhone 14 Pro'",
+      },
+    },
+
+    dependencies: [
+      "@react-native-community/blur",
+      "@react-native-community/datetimepicker",
+      "@react-native-community/netinfo",
+      "@react-native-picker/picker",
+      "@react-navigation/bottom-tabs",
+      "@react-navigation/native",
+      "@react-navigation/native-stack",
+      "@reduxjs/toolkit",
+      "@tanstack/react-query",
+      "dayjs",
+      "i18next",
+      "react-i18next",
+      "react-native-device-info",
+      "react-native-gesture-handler",
+      "react-native-mmkv",
+      "react-native-reanimated",
+      "react-native-safe-area-context",
+      "react-native-screens",
+      "react-native-svg",
+      "react-native-toast-notifications",
+      "react-native-ui-lib",
+      "react-native-uuid",
+      "react-native-vector-icons",
+      "react-redux",
+      "redux-persist",
+    ],
+
+    devDependencies: [
+      "@types/react-native-vector-icons",
+      "babel-plugin-module-resolver",
+    ],
+  },
   // {
   //   name: "ts-starter",
   //   label: "Typescript Starter",
